@@ -1,0 +1,38 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5em;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+    justify-content: center;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: var(--secondary-font);
+      -webkit-text-stroke: 1px var(--secondary-font-clr);
+      -webkit-text-fill-color: transparent;
+      text-stroke: 1px var(--secondary-font-clr);
+      text-fill: transparent;
+    }
+
+    h1 {
+      font-family: var(--tertiary-font);
+      font-weight: 700;
+      font-size: 4rem;
+
+      span:first-child {
+        color: var(--focus-font-clr);
+      }
+    }
+  }
+
+  .right {
+    svg {
+      margin: 0 0 0 auto;
+    }
+  }
+}

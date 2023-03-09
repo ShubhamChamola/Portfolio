@@ -1,16 +1,16 @@
 import HeroSVG from "../../assets/HeroSVG";
-// import styles from "../../styles/hero.module.scss";
+import styles from "../../styles/hero.module.scss";
 
 const Hero: React.FC = () => {
   return (
-    <section>
-      <div className="left">
-        <h3> hi! i'm Shubham Chamola &</h3>
+    <section className={styles.hero}>
+      <div className={styles.left}>
+        <h3> hi! I'm Shubham Chamola &</h3>
         <h1>
           I <span>DEVELOP</span> WEBSITES & WEBAPPS
         </h1>
       </div>
-      <div className="right">
+      <div className={styles.right}>
         <HeroSVG />
       </div>
     </section>
