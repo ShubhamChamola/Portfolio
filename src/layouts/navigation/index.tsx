@@ -1,4 +1,4 @@
-import styles from "../../styles/navigation.module.scss";
+import styles from "./style.module.scss";
 
 const Navigation: React.FC = () => {
   return (

@@ -26,5 +26,9 @@ body {
 }
 
 section {
-  margin: 5em 0em;
+  padding: 5em 0em;
+
+  &:nth-child(1) {
+    padding-top: 8em;
+  }
 }

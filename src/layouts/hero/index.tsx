@@ -1,5 +1,5 @@
 import HeroSVG from "../../assets/HeroSVG";
-import styles from "../../styles/hero.module.scss";
+import styles from "./style.module.scss";
 
 const Hero: React.FC = () => {
   return (
