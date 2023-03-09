@@ -1,0 +1,44 @@
+.link-highlight {
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    transition: all linear 0.2s;
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--secondary-bg);
+    border-radius: 50px;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.logo-appear {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    transition: all linear 0.2s;
+    content: ".";
+    position: absolute;
+    width: 7.5ch;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: var(--primary-bg);
+  }
+
+  &:hover {
+    &::after {
+      width: 0ch;
+    }
+  }
+}

@@ -1,10 +1,18 @@
-import React from "react";
+import "./styles/global.scss";
+import { Outlet } from "react-router-dom";
+import Navigation from "./layouts/navigation";
 
 function App() {
   return (
-    <div className="App">
-      <p>Initial Set Up</p>
-    </div>
+    <>
+      <header>
+        <Navigation />
+      </header>
+      <main>
+        <Outlet />
+      </main>
+      <footer></footer>
+    </>
   );
 }
 

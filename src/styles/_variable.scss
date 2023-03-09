@@ -1,0 +1,24 @@
+:root {
+  // Fonts
+  --primary-font: "Roboto Condensed", sans-serif;
+  --secondary-font: "Kalam", cursive;
+  --tertiary-font: "Oswald", sans-serif;
+
+  // Colors
+  --brown: #221c1b;
+  --dark-blue: #2a3640;
+  --light-blue: rgba(42, 54, 64, 0.65);
+  --yellow: #ffefa4;
+  --white: #ffffff;
+  --off-white: rgba(255, 255, 255, 0.65);
+  --extra-off-white: rgba(255, 255, 255, 0.15);
+}
+
+.dark-theme {
+  --primary-bg: var(--brown);
+  --secondary-bg: var(--extra-off-white);
+
+  --primary-font-clr: var(--white);
+  --secondary-font-clr: var(--off-white);
+  --focus-font-clr: var(--yellow);
+}

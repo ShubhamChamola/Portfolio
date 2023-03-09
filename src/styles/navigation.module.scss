@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 0em;
+
+  span {
+    font-size: 1.5rem;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+    list-style: none;
+    font-weight: 500;
+  }
+}

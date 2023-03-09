@@ -1,0 +1,26 @@
+@import "./variable.scss";
+@import "./animation";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--primary-font);
+  font-size: 20px;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  font-size: 1rem;
+  background-color: var(--primary-bg);
+  color: var(--primary-font-clr);
+  margin: 0 auto;
+}
