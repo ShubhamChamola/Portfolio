@@ -1,0 +1,17 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    gap: 1em;
+
+    li svg {
+      width: 30px;
+    }
+  }
+}
