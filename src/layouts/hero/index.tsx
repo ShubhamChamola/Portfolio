@@ -1,4 +1,4 @@
-import HeroSVG from "../../assets/HeroSVG";
+import HeroSVG from "../../icons/HeroSVG";
 import styles from "./style.module.scss";
 
 const Hero: React.FC = () => {

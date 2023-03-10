@@ -1,9 +1,9 @@
-import ReactSVG from "../../assets/ReactSVG";
-import FirebaseSVG from "../../assets/FirebaseSVG";
-import HtmlSVG from "../../assets/HtmlSVG";
-import SassSVG from "../../assets/SassSVG";
-import JsSVG from "../../assets/JsSVG";
-import TsSVG from "../../assets/TsSVG";
+import ReactSVG from "../../icons/ReactSVG";
+import FirebaseSVG from "../../icons/FirebaseSVG";
+import HtmlSVG from "../../icons/HtmlSVG";
+import SassSVG from "../../icons/SassSVG";
+import JsSVG from "../../icons/JsSVG";
+import TsSVG from "../../icons/TsSVG";
 import styles from "./style.module.scss";
 
 const Skills: React.FC = () => {
