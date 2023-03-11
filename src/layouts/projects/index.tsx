@@ -56,7 +56,7 @@ const projectData = [
 
 const Projects: React.FC = () => {
   return (
-    <section className={styles.projects}>
+    <section id="projects" className={styles.projects}>
       <h2>Recent Projects</h2>
       {projectData.map((project, index) => (
         <article key={`${index}-${project.name}`}>

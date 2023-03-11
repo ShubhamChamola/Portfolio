@@ -2,9 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5em 0em;
+  padding: 1em 0em;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1440px;
+  width: 100%;
+  z-index: 3;
 
-  span {
+  & > a {
     font-size: 1.5rem;
     font-family: var(--secondary-font);
     font-weight: 700;

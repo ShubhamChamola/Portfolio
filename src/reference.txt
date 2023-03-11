@@ -1,0 +1,13 @@
+main icon :-<a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Freepik - Flaticon</a>
+
+whastapp :- <a href="https://www.flaticon.com/free-icons/whatsapp" title="whatsapp icons">Whatsapp icons created by Freepik - Flaticon</a>
+
+git hub :- <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Pixel perfect - Flaticon</a>
+
+sea : <a href="https://www.flaticon.com/free-icons/sailboat" title="sailboat icons">Sailboat icons created by Freepik - Flaticon</a>
+
+theme: <a href="https://www.flaticon.com/free-icons/light-mode" title="light mode icons">Light mode icons created by Freepik - Flaticon</a>
+
+moon: <a href="https://www.flaticon.com/free-icons/dark-mode" title="dark mode icons">Dark mode icons created by Icon Hubs - Flaticon</a>
+
+sun: <a href="https://www.flaticon.com/free-icons/sunlight" title="sunlight icons">Sunlight icons created by Anggara - Flaticon</a>

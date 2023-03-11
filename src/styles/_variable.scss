@@ -5,20 +5,37 @@
   --tertiary-font: "Oswald", sans-serif;
 
   // Colors
+  --black: rgb(0, 0, 0);
   --brown: #221c1b;
-  --dark-blue: #2a3640;
-  --light-blue: rgba(42, 54, 64, 0.65);
-  --yellow: #ffefa4;
+  --extra-off-brown: rgba(34, 28, 27, 0.45);
+
+  // --dark-blue: #2a3640;
+  // --light-blue: rgba(42, 54, 64, 0.65);
+
+  --yellow: #ffc062;
+  --cream: #f7f5d1;
+
   --white: #ffffff;
   --off-white: rgba(255, 255, 255, 0.65);
   --extra-off-white: rgba(255, 255, 255, 0.15);
 }
 
-.dark-theme {
+.dark-mode {
   --primary-bg: var(--brown);
   --secondary-bg: var(--extra-off-white);
+  --nav-bg: rgba(34, 28, 27, 0.85);
 
   --primary-font-clr: var(--white);
   --secondary-font-clr: var(--off-white);
+  --focus-font-clr: var(--yellow);
+}
+
+.light-mode {
+  --primary-bg: var(--cream);
+  --secondary-bg: var(--extra-off-brown);
+  --nav-bg: rgba(247, 245, 209, 0.85);
+
+  --primary-font-clr: var(--brown);
+  --secondary-font-clr: var(--black);
   --focus-font-clr: var(--yellow);
 }

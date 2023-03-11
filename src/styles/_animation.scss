@@ -23,25 +23,26 @@
 }
 
 // For the logo in the navigation
-.logo-appear {
-  position: relative;
-  overflow: hidden;
+// .logo-appear {
+//   position: relative;
+//   overflow: hidden;
 
-  &::after {
-    transition: all linear 0.2s;
-    content: ".";
-    position: absolute;
-    width: 7.5ch;
-    height: 100%;
-    right: 0;
-    top: 0;
-    background: var(--primary-bg);
-    transform: rotate(2deg);
-  }
+//   &::after {
+//     transition: all linear 0.2s;
+//     content: ".";
+//     position: absolute;
+//     width: 7.5ch;
+//     height: 100%;
+//     right: 0;
+//     top: 0;
+//     background: var(--nav-bg);
+//     backdrop-filter: blur(10px);
+//     transform: rotate(2deg);
+//   }
 
-  &:hover {
-    &::after {
-      width: 0ch;
-    }
-  }
-}
+//   &:hover {
+//     &::after {
+//       width: 0ch;
+//     }
+//   }
+// }

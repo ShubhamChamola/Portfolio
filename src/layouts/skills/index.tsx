@@ -8,26 +8,32 @@ import styles from "./style.module.scss";
 
 const Skills: React.FC = () => {
   return (
-    <section className={styles.skills}>
-      <h2>My Top Skills</h2>
+    <section id="skills" className={styles.skills}>
+      <h2>My Skills</h2>
       <ul>
         <li>
           <ReactSVG />
+          <span>React</span>
         </li>
         <li>
           <FirebaseSVG />
+          <span>Firebase</span>
         </li>
         <li>
           <HtmlSVG />
+          <span>Html</span>
         </li>
         <li>
           <SassSVG />
+          <span>Sass</span>
         </li>
         <li>
           <JsSVG />
+          <span>Javascript</span>
         </li>
         <li>
           <TsSVG />
+          <span>Typescript</span>
         </li>
       </ul>
     </section>
