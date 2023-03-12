@@ -58,10 +58,6 @@ section {
   &:nth-child(1) {
     padding-top: 12em;
   }
-  &:last-child {
-    padding-bottom: 0em;
-    margin-bottom: 8em;
-  }
 }
 
 h2 {
@@ -79,4 +75,9 @@ a {
 
 .arrow {
   fill: var(--primary-font-clr);
+}
+
+p {
+  line-height: 150%;
+  letter-spacing: 0.2ch;
 }

@@ -1,5 +1,5 @@
 import styles from "./style.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Prop {
   images: string[];
@@ -7,6 +7,10 @@ interface Prop {
 
 const ProjectImages: React.FC<Prop> = ({ images }) => {
   const [currImg, setCurrImg] = useState(0);
+
+  useEffect(() => {
+    setCurrImg(0);
+  }, [images]);
 
   return (
     <div className={styles.container}>

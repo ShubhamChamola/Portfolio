@@ -1,33 +1,32 @@
 import Theme from "../../components/theme";
 import styles from "./style.module.scss";
+import { Link, useNavigate } from "react-router-dom";
 
 function navLinkHandler(id: string) {
   const target = document.getElementById(id);
-  // target?.scrollIntoView({ behavior: "smooth" });
-
-  window.scrollTo({
-    top: target?.getBoundingClientRect().top,
-    behavior: "smooth",
-  });
+  target?.scrollIntoView({ behavior: "smooth" });
 }
 
 const Navigation: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <nav className={styles.nav}>
-      <a
-        href="#hero"
+      <Link
+        to="/"
         className="logo-appear"
         onClick={(event) => {
+          navigate("/");
           event.preventDefault();
           navLinkHandler("hero");
         }}
       >
         SHUBHAM C.
-      </a>
+      </Link>
       <ul>
-        <a href="#mode">
+        <span>
           <Theme />
-        </a>
+        </span>
         <a
           href="#about"
           className="link-highlight"

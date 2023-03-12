@@ -4,10 +4,16 @@
   gap: 1em;
 
   .current {
+    max-width: 1200px;
     width: 100%;
     aspect-ratio: 1/0.55;
     border-radius: 4px;
     box-shadow: 0px 2px 3px var(--secondary-bg);
+    overflow: hidden;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
   }
 
   .list {
