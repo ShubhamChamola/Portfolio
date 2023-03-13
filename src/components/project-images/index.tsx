@@ -49,7 +49,7 @@ const ProjectImages: React.FC<Prop> = ({ images }) => {
   return (
     <div className={styles.container}>
       <div className={styles.current}>
-        <img src={currImg} alt="" />
+        <img src={currImg} alt="Selected SS of the project" />
       </div>
       {isMobile ? (
         <>
@@ -88,7 +88,7 @@ const ProjectImages: React.FC<Prop> = ({ images }) => {
                       setCurrImg(images[index]);
                     }}
                   >
-                    <img src={img} alt="" />
+                    <img src={img} alt="screen shots of the project" />
                   </div>
                 );
               } else {

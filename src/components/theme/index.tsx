@@ -40,7 +40,10 @@ const Theme: React.FC = () => {
       }}
     >
       <span className={styles.mode}>
-        <img src={isLightMode ? lightModeImg : darkModeImg} alt="" />
+        <img
+          src={isLightMode ? lightModeImg : darkModeImg}
+          alt="Icon specifing dark theme(Moon) or light theme(Sun) for the site"
+        />
       </span>
     </div>
   );
