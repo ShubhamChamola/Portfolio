@@ -16,8 +16,19 @@
       rel="stylesheet"
     />
   </head>
-  <body class="dark-mode">
+  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+
+  <script type="text/JavaScript">
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      document.querySelector("body")?.classList.add("dark-mode");
+    } else {
+      document.querySelector("body")?.classList.add("light-mode");
+    }
+  </script>
 </html>
