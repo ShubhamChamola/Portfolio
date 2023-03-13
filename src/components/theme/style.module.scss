@@ -1,5 +1,5 @@
 .theme {
-  width: 75px;
+  width: 60px;
   height: 28px;
   border-radius: 50px;
   border: 3px solid var(--primary-font-clr);
@@ -21,22 +21,6 @@
 
     img {
       width: 20px;
-    }
-  }
-
-  .seperator {
-    display: flex;
-    gap: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    & > span {
-      width: 3px;
-      height: 15px;
-      background-color: var(--primary-font-clr);
-      border-radius: 50px;
     }
   }
 }

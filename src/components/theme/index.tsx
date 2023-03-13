@@ -37,10 +37,6 @@ const Theme: React.FC = () => {
       <span className={styles.mode}>
         <img src={isLightMode ? lightModeImg : darkModeImg} alt="" />
       </span>
-      <div className={styles.seperator}>
-        <span></span>
-        <span></span>
-      </div>
     </div>
   );
 };

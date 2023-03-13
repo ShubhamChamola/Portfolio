@@ -8,10 +8,11 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
+import Error from "./pages/404";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />} errorElement={<p>Error Occured</p>}>
+    <Route path="/" element={<App />} errorElement={<Error />}>
       <Route index element={<Home />} />
       <Route path="projects/:projectID" element={<Project />} />
     </Route>
