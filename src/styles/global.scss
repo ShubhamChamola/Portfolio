@@ -39,17 +39,8 @@ body {
   }
 
   &.light-mode {
-    .style_mode__P9Bu7 {
-      left: -3px;
-    }
     &::-webkit-scrollbar-thumb {
       background-color: var(--extra-off-brown);
-    }
-  }
-
-  &.dark-mode {
-    .style_mode__P9Bu7 {
-      right: -3px;
     }
   }
 }

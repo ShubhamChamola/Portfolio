@@ -17,13 +17,18 @@ const Theme: React.FC = () => {
 
   useEffect(() => {
     let body = document.querySelector("body")!;
+    let mode = document.querySelector(`.${styles.mode}`) as HTMLElement;
 
     if (isLightMode) {
       body.classList.add("light-mode");
       body.classList.remove("dark-mode");
+      mode.style.left = "-3px";
+      mode.style.right = "unset";
     } else {
       body.classList.remove("light-mode");
       body.classList.add("dark-mode");
+      mode.style.right = "-3px";
+      mode.style.left = "unset";
     }
   }, [isLightMode]);
 
