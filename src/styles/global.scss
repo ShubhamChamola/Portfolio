@@ -16,12 +16,13 @@ html {
 }
 
 body {
-  max-width: 1440px;
   width: 100%;
   font-size: 1rem;
   background-color: var(--primary-bg);
   color: var(--primary-font-clr);
   margin: 0 auto;
+  padding: 0 2em;
+  scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -36,33 +37,63 @@ body {
     background-color: rgba(222, 222, 222, 0.3);
     border-radius: 6px;
   }
+
+  &.light-mode {
+    .style_mode__P9Bu7 {
+      left: -3px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--extra-off-brown);
+    }
+  }
+
+  &.dark-mode {
+    .style_mode__P9Bu7 {
+      right: -3px;
+    }
+  }
 }
 
-body.light-mode {
-  .style_mode__P9Bu7 {
-    left: -3px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--extra-off-brown);
-  }
-}
-body.dark-mode {
-  .style_mode__P9Bu7 {
-    right: -3px;
+header {
+  padding: 1em 2em;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 3;
+
+  nav {
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
-section {
-  padding: 6em 0em;
+main {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: calc(100px + 4em);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6em, 10vw, 10em);
+}
 
-  &:nth-child(1) {
-    padding-top: 12em;
-  }
+footer {
+  width: 100%;
+  max-width: 1440px;
+  margin: 8em auto 6em auto;
+}
+
+.arrow {
+  fill: var(--primary-font-clr);
 }
 
 h2 {
   font-family: var(--tertiary-font);
-  font-size: 2rem;
+  // font-size: clamp(1.2rem, 5vw, 2rem);
   font-weight: 500;
   letter-spacing: 0.05ch;
   padding-bottom: 1em;
@@ -73,11 +104,24 @@ a {
   color: inherit;
 }
 
-.arrow {
-  fill: var(--primary-font-clr);
-}
-
 p {
   line-height: 150%;
   letter-spacing: 0.2ch;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+
+  body,
+  header {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  main {
+    padding-top: calc(100px + 3em);
+  }
 }

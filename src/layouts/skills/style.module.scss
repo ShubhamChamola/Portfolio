@@ -8,12 +8,11 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    gap: 2em;
+    gap: 3em;
 
     li {
       display: flex;
       flex-direction: column;
-      // justify-content: center;
       align-items: center;
       gap: 1em;
 
@@ -26,6 +25,57 @@
         font-weight: 500;
         font-family: var(--tertiary-font);
       }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .skills {
+    ul {
+      gap: 5em;
+      row-gap: 4em;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .skills {
+    ul {
+      row-gap: 3em;
+      column-gap: clamp(4em, 10vw, 7em);
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+    }
+    svg {
+      height: 70px !important;
+    }
+
+    span {
+      font-size: 0.9rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .skills {
+    ul {
+      column-gap: 4em;
+    }
+    svg {
+      height: 60px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .skills {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    svg {
+      height: 60px !important;
     }
   }
 }

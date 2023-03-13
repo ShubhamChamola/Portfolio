@@ -12,10 +12,12 @@ const Projects: React.FC = () => {
       {projectData.map((project, index) => (
         <article key={`${index}-${project.name}`}>
           <ProjectImages images={project.images} />
-          <div>{`${index + 1}`.padStart(2, "0")}</div>
+          <div>
+            <span>{`${index + 1}`.padStart(2, "0")}</span>
+          </div>
           <div>
             <h3>{project.name}</h3>
-            <ul className="stack">
+            <ul>
               {project.stack.map((tech, index) => (
                 <li key={`${index}-${project.name}-${tech}`}>{tech}</li>
               ))}

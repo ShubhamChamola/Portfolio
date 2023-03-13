@@ -49,7 +49,7 @@ export const projectData: BriefData[] = [
       "/assets/project-images/personal-blog/personal-blog-3.png",
       "/assets/project-images/personal-blog/personal-blog-4.png",
     ],
-    url: "bogger",
+    url: "blogger",
   },
   {
     name: "Quiz App",

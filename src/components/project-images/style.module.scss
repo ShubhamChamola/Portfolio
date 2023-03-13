@@ -39,4 +39,33 @@
       }
     }
   }
+
+  .active {
+    svg {
+      path:last-child {
+        fill: var(--primary-font-clr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .container {
+    .list > div {
+      aspect-ratio: 1;
+      width: fit-content;
+      border: none;
+
+      &:hover {
+        border: none;
+      }
+
+      svg {
+        width: 15px;
+        path:first-child {
+          fill: var(--primary-font-clr);
+        }
+      }
+    }
+  }
 }

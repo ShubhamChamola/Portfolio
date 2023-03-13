@@ -42,7 +42,7 @@ const Project: React.FC = () => {
   }, [projectID]);
 
   return (
-    <>
+    <main className={styles.main}>
       <div className={styles["top-links"]}>
         <a href={data?.url} target="blank" className="link-highlight">
           VIEW LIVE <ArrowSVG />
@@ -88,7 +88,7 @@ const Project: React.FC = () => {
           </ol>
         </div>
       </section>
-    </>
+    </main>
   );
 };
 

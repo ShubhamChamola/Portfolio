@@ -9,10 +9,9 @@
     flex-direction: column;
     gap: 2em;
     justify-content: center;
-    margin-top: -4em;
 
     h2 {
-      font-size: 4rem;
+      font-size: clamp(3rem, 7vw, 4rem);
       font-weight: 700;
       font-family: var(--secondary-font);
       -webkit-text-stroke: 1px var(--secondary-font-clr);
@@ -24,8 +23,12 @@
     }
 
     h3 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       font-size: 3rem;
-      & > span {
+      gap: 0.5ch;
+      & > span:last-child {
         color: var(--focus-font-clr);
       }
     }
@@ -53,6 +56,29 @@
   .right {
     svg {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3em;
+  }
+
+  .right {
+    svg {
+      display: block;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  .left {
+    align-items: center;
+    h3 {
+      justify-content: center;
     }
   }
 }

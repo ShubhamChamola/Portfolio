@@ -1,15 +1,15 @@
 .projects {
   display: flex;
   flex-direction: column;
+  gap: clamp(4em, 10vw, 8em);
+
+  h2 {
+    margin-bottom: -3em;
+  }
 
   article {
     width: 100%;
     display: flex;
-    margin-bottom: 6em;
-
-    &:last-child {
-      margin: 0;
-    }
 
     & > div:first-child {
       max-width: 700px;
@@ -45,6 +45,7 @@
         font-family: var(--tertiary-font);
         font-size: 2.8rem;
         font-weight: 700;
+        line-height: 100%;
       }
 
       ul {
@@ -62,6 +63,7 @@
           -webkit-backdrop-filter: blur(18px);
           border: 1px solid var(--secondary-bg);
           border-radius: 1rem;
+          height: fit-content;
         }
       }
 
@@ -75,6 +77,129 @@
 
         svg {
           width: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .projects article {
+    & > div:last-child {
+      padding: 0;
+      margin-left: 3em;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .projects article {
+    & > div:nth-child(2) {
+      font-size: 3rem;
+    }
+    & > div:last-child {
+      margin-left: 2em;
+      gap: 1.5em;
+      h3 {
+        font-size: 2rem;
+      }
+
+      ul li {
+        font-size: 0.9rem;
+      }
+
+      div:last-child {
+        font-size: 0.8rem;
+        gap: 6px;
+        svg {
+          width: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .projects {
+    gap: 7em;
+
+    h2 {
+      margin-bottom: -3em;
+    }
+
+    article {
+      position: relative;
+      flex-direction: column;
+      gap: 2em;
+
+      & > div:first-child {
+        margin: 0 auto;
+        aspect-ratio: unset;
+      }
+
+      & > div:nth-child(2) {
+        max-width: 700px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: end;
+      }
+
+      & > div:last-child {
+        position: relative;
+        justify-content: unset;
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        row-gap: 20px;
+        column-gap: 5em;
+        grid-template-columns: auto auto;
+
+        ul {
+          align-items: unset;
+          justify-content: flex-end;
+        }
+
+        & > div:last-child {
+          position: absolute;
+          top: 4em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .projects {
+    article {
+      gap: 1em;
+
+      & > div:nth-child(2) {
+        top: -45px;
+        font-size: 2rem;
+      }
+
+      & > div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+
+        ul {
+          width: 100%;
+          justify-content: flex-start;
+          li {
+            font-size: 0.7rem;
+          }
+        }
+
+        & > div:last-child {
+          position: unset;
         }
       }
     }

@@ -5,12 +5,12 @@ import Projects from "../layouts/projects";
 
 const Home: React.FC = () => {
   return (
-    <>
+    <main>
       <Hero />
       <About />
       <Skills />
       <Projects />
-    </>
+    </main>
   );
 };
 

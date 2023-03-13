@@ -10,7 +10,7 @@
     justify-content: center;
 
     h3 {
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 700;
       font-family: var(--secondary-font);
       -webkit-text-stroke: 1px var(--secondary-font-clr);
@@ -22,7 +22,7 @@
     h1 {
       font-family: var(--tertiary-font);
       font-weight: 700;
-      font-size: 4rem;
+      font-size: clamp(2rem, 5.5vw, 4rem);
 
       span:first-child {
         color: var(--focus-font-clr);
@@ -32,7 +32,36 @@
 
   .right {
     svg {
+      display: block;
+      max-width: 600px;
       margin: 0 0 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  .hero {
+    grid-template-columns: 1fr 0.75fr;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .hero {
+    display: block;
+
+    .left {
+      h3 {
+        font-size: clamp(1.25rem, 5vw, 2rem);
+      }
+
+      h1 {
+        max-width: 800px;
+        font-size: clamp(2rem, 10vw, 3.7rem);
+      }
+    }
+
+    .right {
+      display: none;
     }
   }
 }

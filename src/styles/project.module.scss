@@ -1,13 +1,17 @@
+.main {
+  gap: 4em;
+}
+
 .top-links {
   width: fit-content;
   display: flex;
   align-items: center;
   gap: 4em;
-  margin: 12em auto 6em auto;
+  margin: 0 auto;
 
   a {
     display: block;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
     font-weight: 500;
     svg {
       display: inline-block;
@@ -21,14 +25,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 3em auto 0em auto;
-  max-width: 1200px;
+  margin-top: -2em;
 
   ul {
     display: flex;
     align-items: center;
     gap: 2em;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
     span {
       opacity: 0.5;
       border-bottom: 3px solid transparent;
@@ -36,21 +39,20 @@
   }
 
   & > span {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     font-family: var(--tertiary-font);
     -webkit-text-stroke: 1px var(--secondary-font-clr);
     -webkit-text-fill-color: transparent;
     text-stroke: 1px var(--secondary-font-clr);
     text-fill: transparent;
-    margin-top: -4em;
   }
 }
 
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6em;
+  gap: clamp(3em, 7vw, 6em);
 
   .left {
     display: flex;
@@ -90,6 +92,29 @@
 
       li {
         margin-left: 3ch;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .content {
+    margin-top: -1em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+    .left {
+      max-width: 850px;
+
+      h3 {
+        font-size: clamp(2rem, 2vw, 2.8rem);
+      }
+    }
+
+    .right {
+      h4 {
+        font-size: clamp(1.25rem, 2vw, 1.5rem);
       }
     }
   }

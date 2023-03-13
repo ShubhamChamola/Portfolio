@@ -2,16 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0em;
-  background: var(--nav-bg);
-  backdrop-filter: blur(10px);
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 1440px;
-  width: 100%;
-  z-index: 3;
 
   & > a {
     font-size: 1.5rem;
@@ -20,12 +10,85 @@
     cursor: pointer;
   }
 
-  ul {
+  .nav-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1.5em;
     list-style: none;
     font-weight: 500;
+  }
+}
+
+.menu-toggle {
+  width: 35px;
+  aspect-ratio: 1;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background-color: var(--primary-font-clr);
+  padding: 8px;
+  border-radius: 50px;
+  cursor: pointer;
+
+  span {
+    background-color: var(--primary-bg);
+    width: 100%;
+    height: 2px;
+    border-radius: 50px;
+  }
+
+  &.active {
+    position: relative;
+
+    span {
+      max-width: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: center;
+
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+    span:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav {
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      min-height: 100vh;
+      max-width: 200px;
+      width: 100%;
+      background: var(--nav-bg);
+      padding: 100px 1em 0 1em;
+      justify-content: unset;
+      gap: 3em;
+      transition: all linear 0.2s;
+      transform: translateX(100%);
+      overflow: scroll;
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
   }
 }
