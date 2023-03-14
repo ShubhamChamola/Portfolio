@@ -1,5 +1,5 @@
 # View Live
-Live [https://portfolio-rho-three-96.vercel.app/]
+[Live](https://portfolio-rho-three-96.vercel.app/)
 
 # Getting Started with Create React App
 
