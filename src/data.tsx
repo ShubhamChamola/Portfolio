@@ -96,12 +96,12 @@ const otsBlogData: DetailedData = {
   prev: null,
   next: "chat-app",
   introPara:
-    "Its a blogging site for motorbikes. A user can surf through various blogs and can even create their account to get more personalized experience. A logged in user can like as well as bookmark a blog. A user can upload their profile pic and can be more connected to the site. They can comment on a blog and can share their views or read what other people think. Check out the site to know more.",
+    "Its a blogging site for motorbikes. A user can surf through various blogs and can even create their account to get more personalized experience. A logged in user can like as well as bookmark a blog. A user can upload their profile pic and can be more connected to the site. They can comment on a blog and can share their views. Check out the site to know more.",
   features: {
     Authentication: "Support for Google Auth.",
     "Firebase Storage":
       "For storing user profile image as well as blog images.",
-    "Firebase Realtime Database": "To store all the comments for the blogs.",
+    "Firebase Realtime Database": "To store all the comments for the blog.",
     "Firebase Firestore":
       "Storing all the blog as well as user's data in the form of documents.",
     "Blog Form": "A form for creating blogs, can only be accessed by admin.",
@@ -127,17 +127,16 @@ const chatAppData: DetailedData = {
   prev: "ots-blog",
   next: "blogger",
   introPara:
-    "Its a basic social app. A user is first asked to either login or create an account to interact with the site. A user can upload their profile pic and can be more connected to the site. They can send friend request to other users of the site and if they accept the request they both can chat. Check out the site to know more.",
+    "Its a social app. A user is first asked to either login or create an account to interact with the site. A user can upload their profile pic and can be more connected to the site. They can send friend request to other users and if the request get accepted they both can chat. Its still under development. Check out the site to know more.",
   features: {
     Authentication: "Support for Email Auth.",
     "Firebase Storage": "For storing user profile image.",
     "Firebase Firestore":
       "To store all the data related to the webapp like messages, requests and user info.",
     "Search bar": "For searching other people in the app.",
-    "Notificatin Pannel":
-      "A user can check the status of their friend request.",
+    "Notificatin Pannel": "A user can check the status of their request.",
     "Realtime Chat":
-      "All the types messages are send within small time frame and with info like the time at which message was sent.",
+      "All messages are send within small time frame and with info like timestamp of the message.",
   },
 };
 
@@ -156,9 +155,9 @@ const bloggerData: DetailedData = {
   prev: "chat-app",
   next: "quiz-app",
   introPara:
-    "Its a blogging site. A user can surf through various blogs or create their own blogs. User can even create their account to get more personalized experience. A logged in user can like as well as bookmark a blog. A user can upload their profile pic and can be more connected to the site.User can even search a blog. Check out the site to know more.",
+    "Its a blogging site. A user can surf through various blogs or create their own blog. Create an account to get more personalized experience. A logged in user can like as well as bookmark a blog and can upload their profile pic and can be more connected to the site. User can even search a blog. Check out the site to know more.",
   features: {
-    Authentication: "Support for Google Auth",
+    Authentication: "Support for Google Auth & Email Auth",
     "Firebase Storage":
       "For storing user profile image as well as blog images.",
     "Firebase Firestore":
@@ -166,11 +165,11 @@ const bloggerData: DetailedData = {
     "Blog Form":
       "A form for creating blogs, can be accessed by a logged in user.",
     "Category or Custom Search":
-      "User can search trhough blogs according to their own keyword or according to the specified keywords.",
+      "User can search through blogs according to their search query or according to the specified keywords.",
     "Edit Blog & Profile":
-      "User can edit already created blog and theur profile info like username, bio or avatar.",
+      "User can edit already created blog and their profile info like username, bio or profile pic.",
     Interactivity:
-      "A user can like a blog or bookmark it, according to the likes a blog can be seen at the most liked section in the site.",
+      "A user can like a blog or bookmark it, according to the likes a blog get dispalyed in the trending section.",
   },
 };
 
@@ -189,14 +188,14 @@ const quizAppData: DetailedData = {
   prev: "blogger",
   next: "sassy-calci",
   introPara:
-    "Its a webapp where you will be asked some questions related to javascript. Each question is unique and their is only one write answer out of four. If you answered correctly you will move on to the next question but if you answer is incorrect you wil get a penalty of 10 secs. Their is a timmer which initiate as soon as you start the quiz. you have 180s if you run out of time quiz will end. Check out the site to know more.",
+    "Its a webapp where you will be asked some questions related to javascript. Each question is unique and their is only one write answer out of four. If you answered correctly you will move on to the next question but if the answer is incorrect you will get a penalty of 10 secs. Their is a timmer which initiate as soon as you start the quiz. you have 180s if you run out of time quiz will end. Check out the site to know more.",
   features: {
     Interactive:
-      "The webapp is interactive for instance if you click on the wrong answer, app will tell its invalid and to try again.",
+      "The webapp is interactive for instance if you click on the wrong answer, app will display the option is incorrect.",
     Engaging:
       "Their is a timer which create a fun and learning environment for the user and gets the user engaged with the app.",
     Leaderboard:
-      "At the end of each quiz you will be asled to enter you initials and it will be stored in your localstorage. So multiple users can play in a sequnce manner and can compare their scores.",
+      "At the end of each quiz you will be asked to enter you initials and it will be stored in your localstorage. So multiple users can play and can compare their scores.",
   },
 };
 
