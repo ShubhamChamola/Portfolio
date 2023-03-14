@@ -8,12 +8,12 @@ const About: React.FC = () => {
       <div>
         <h2>ABOUT ME</h2>
         <p>
-          I've been sailing the web development seas for way too long & creating
-          everything from regular websites to dashboards. <br /> <br />I have a
-          passion for creating engaging and user-friendly web experiences that
-          make people smile. I believe that the web has the power to connect us
-          and bring us closer together, and I'm excited to be a part of that
-          journey.
+          As a web developer, I navigate the vast and ever-changing digital sea,
+          using my skills to craft websites that are not only functional but
+          also visually appealing. <br /> <br />
+          Whether it's developing a custom web application or creating a
+          responsive and visually stunning website, I'm always up for a
+          challenge and excited to learn new skills along the way.
         </p>
       </div>
       <div>

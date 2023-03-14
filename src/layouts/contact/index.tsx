@@ -7,10 +7,8 @@ const Contact: React.FC = () => {
       <h2>Get In Touch</h2>
       <div className={styles.left}>
         <p>
-          I’m currently looking for any new opportunities, so if you wish to
-          talk, reach me on any of the social paltforms my inbox is always open.
-          Whether you have a question or just want to say hi, I’ll try my best
-          to get back to you!
+          I am open to work and currently looking for new oppotunities to grow
+          my skill set, just ping me up on my social and I’ll get back to you!
         </p>
       </div>
       <div className={styles.right}>
@@ -44,6 +42,17 @@ const Contact: React.FC = () => {
             href="https://github.com/ShinOO7?tab=repositories"
           >
             My Repositories
+            <ArrowSVG />
+          </a>
+        </div>
+        <div>
+          <span>LinkedIn - </span>
+          <a
+            className="link-highlight"
+            target="blank"
+            href="https://www.linkedin.com/in/shubham-chamola-a82594246"
+          >
+            Shubham@linkedin
             <ArrowSVG />
           </a>
         </div>

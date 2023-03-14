@@ -31,10 +31,6 @@ const ProjectImages: React.FC<Prop> = ({ images }) => {
   }, []);
 
   useEffect(() => {
-    setCurrImg(images[0]);
-  }, [images]);
-
-  useEffect(() => {
     setCurrImg((prev) => {
       if (prev) {
         document.getElementById(prev)?.classList.remove(`${styles.active}`);
@@ -44,12 +40,12 @@ const ProjectImages: React.FC<Prop> = ({ images }) => {
         ?.classList.add(`${styles.active}`);
       return images[0];
     });
-  }, [location]);
+  }, [images]);
 
   return (
     <div className={styles.container}>
       <div className={styles.current}>
-        <img src={currImg} alt="Selected SS of the project" />
+        <img src={currImg} alt="Selected screenshots of the project" />
       </div>
       {isMobile ? (
         <>
@@ -88,7 +84,7 @@ const ProjectImages: React.FC<Prop> = ({ images }) => {
                       setCurrImg(images[index]);
                     }}
                   >
-                    <img src={img} alt="screen shots of the project" />
+                    <img src={img} alt="Screenshots of the project" />
                   </div>
                 );
               } else {

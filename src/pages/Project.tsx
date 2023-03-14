@@ -78,14 +78,13 @@ const Project: React.FC = () => {
         </div>
         <div className={styles.right}>
           <h4>FUNCTIONALITY</h4>
-          <p>This Website has the following functionalities:-</p>
-          <ol>
+          <ul>
             {Object.entries(data?.features || {}).map((key, value) => (
               <li>
                 {key[0]} :- {key[1]}
               </li>
             ))}
-          </ol>
+          </ul>
         </div>
       </section>
     </main>
