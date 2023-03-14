@@ -1,10 +1,10 @@
 import styles from "./style.module.scss";
 import { useState, useEffect } from "react";
 import RadioSVG from "../../icons/RadioSVG";
-import { useLocation } from "react-router-dom";
 
 interface Prop {
   images: string[];
+  imageIds: string[];
 }
 
 function initState() {
@@ -15,10 +15,9 @@ function initState() {
   return false;
 }
 
-const ProjectImages: React.FC<Prop> = ({ images }) => {
-  const [currImg, setCurrImg] = useState(images[0]);
+const ProjectImages: React.FC<Prop> = ({ images, imageIds }) => {
+  const [currImg, setCurrImg] = useState(0);
   const [isMobile, setIsMobile] = useState(initState());
-  const location = useLocation();
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -31,40 +30,35 @@ const ProjectImages: React.FC<Prop> = ({ images }) => {
   }, []);
 
   useEffect(() => {
-    setCurrImg((prev) => {
-      if (prev) {
-        document.getElementById(prev)?.classList.remove(`${styles.active}`);
-      }
-      document
-        .getElementById(`${images[0]}`)
-        ?.classList.add(`${styles.active}`);
-      return images[0];
-    });
+    setCurrImg(0);
   }, [images]);
+
+  function handleClick(target: HTMLElement, index: number) {
+    if (index !== currImg) {
+      target?.classList.add(`${styles.active}`);
+      document
+        .getElementById(`${imageIds[currImg]}`)
+        ?.classList.remove(`${styles.active}`);
+
+      setCurrImg(index);
+    }
+  }
 
   return (
     <div className={styles.container}>
       <div className={styles.current}>
-        <img src={currImg} alt="Selected screenshots of the project" />
+        <img src={images[currImg]} alt="Selected screenshots of the project" />
       </div>
       {isMobile ? (
         <>
           <div className={styles.list}>
             {images.map((img, index) => (
               <div
-                key={index}
-                id={img}
+                key={imageIds[index]}
+                id={imageIds[index]}
                 className={index === 0 ? styles.active : ""}
-                onClick={() => {
-                  setCurrImg((prev) => {
-                    document
-                      .getElementById(prev)
-                      ?.classList.remove(`${styles.active}`);
-                    document
-                      .getElementById(images[index])
-                      ?.classList.add(`${styles.active}`);
-                    return images[index];
-                  });
+                onClick={(event) => {
+                  handleClick(event.currentTarget, index);
                 }}
               >
                 <RadioSVG />
@@ -76,12 +70,12 @@ const ProjectImages: React.FC<Prop> = ({ images }) => {
         <>
           <div className={styles.list}>
             {images.map((img, index) => {
-              if (img !== currImg) {
+              if (index !== currImg) {
                 return (
                   <div
                     key={index}
                     onClick={() => {
-                      setCurrImg(images[index]);
+                      setCurrImg(index);
                     }}
                   >
                     <img src={img} alt="Screenshots of the project" />

@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
       <h2>Recent Projects</h2>
       {projectData.map((project, index) => (
         <article key={`${index}-${project.name}`}>
-          <ProjectImages images={project.images} />
+          <ProjectImages images={project.images} imageIds={project.imageIds} />
           <div>
             <span>{`${index + 1}`.padStart(2, "0")}</span>
           </div>

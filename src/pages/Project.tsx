@@ -11,6 +11,7 @@ interface DetailedData {
   url: string;
   git: string;
   images: string[];
+  imageIds: string[];
   prev: null | string;
   next: null | string;
   introPara: string;
@@ -51,7 +52,10 @@ const Project: React.FC = () => {
           GIT HUB <ArrowSVG />
         </a>
       </div>
-      <ProjectImages images={data?.images || []} />
+      <ProjectImages
+        images={data?.images || []}
+        imageIds={data?.imageIds || []}
+      />
       <div className={styles.sequence}>
         <ul>
           {data?.prev ? (

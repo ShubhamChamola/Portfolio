@@ -4,6 +4,7 @@ interface DetailedData {
   url: string;
   git: string;
   images: string[];
+  imageIds: string[];
   prev: null | string;
   next: null | string;
   introPara: string;
@@ -14,6 +15,7 @@ interface BriefData {
   name: string;
   stack: string[];
   images: string[];
+  imageIds: string[];
   url: string;
 }
 
@@ -27,6 +29,7 @@ export const projectData: BriefData[] = [
       "/assets/project-images/blog/blog-3.png",
       "/assets/project-images/blog/blog-4.png",
     ],
+    imageIds: ["ost-1", "ots-2", "ots-3", "ots-4"],
     url: "ots-blog",
   },
   {
@@ -38,6 +41,7 @@ export const projectData: BriefData[] = [
       "/assets/project-images/chat-app/chat-3.png",
       "/assets/project-images/chat-app/chat-4.png",
     ],
+    imageIds: ["chat-1", "chat-2", "chat-3", "chat-4"],
     url: "chat-app",
   },
   {
@@ -49,6 +53,7 @@ export const projectData: BriefData[] = [
       "/assets/project-images/personal-blog/personal-blog-3.png",
       "/assets/project-images/personal-blog/personal-blog-4.png",
     ],
+    imageIds: ["blogger-1", "blogger-2", "blogger-3", "blogger-4"],
     url: "blogger",
   },
   {
@@ -60,6 +65,7 @@ export const projectData: BriefData[] = [
       "/assets/project-images/quiz/quiz-3.png",
       "/assets/project-images/quiz/quiz-4.png",
     ],
+    imageIds: ["quiz-1", "quiz-2", "quiz-3", "quiz-4"],
     url: "quiz-app",
   },
   {
@@ -70,6 +76,7 @@ export const projectData: BriefData[] = [
       "/assets/project-images/calculator/calci-2.png",
       "/assets/project-images/calculator/calci-3.png",
     ],
+    imageIds: ["calci-1", "calci-2", "calci-3", "calci-4"],
     url: "sassy-calci",
   },
 ];
@@ -85,6 +92,7 @@ const otsBlogData: DetailedData = {
     "/assets/project-images/blog/blog-3.png",
     "/assets/project-images/blog/blog-4.png",
   ],
+  imageIds: ["ost-1", "ots-2", "ots-3", "ots-4"],
   prev: null,
   next: "chat-app",
   introPara:
@@ -115,6 +123,7 @@ const chatAppData: DetailedData = {
     "/assets/project-images/chat-app/chat-3.png",
     "/assets/project-images/chat-app/chat-4.png",
   ],
+  imageIds: ["chat-1", "chat-2", "chat-3", "chat-4"],
   prev: "ots-blog",
   next: "blogger",
   introPara:
@@ -143,6 +152,7 @@ const bloggerData: DetailedData = {
     "/assets/project-images/personal-blog/personal-blog-3.png",
     "/assets/project-images/personal-blog/personal-blog-4.png",
   ],
+  imageIds: ["blogger-1", "blogger-2", "blogger-3", "blogger-4"],
   prev: "chat-app",
   next: "quiz-app",
   introPara:
@@ -175,6 +185,7 @@ const quizAppData: DetailedData = {
     "/assets/project-images/quiz/quiz-3.png",
     "/assets/project-images/quiz/quiz-4.png",
   ],
+  imageIds: ["quiz-1", "quiz-2", "quiz-3", "quiz-4"],
   prev: "blogger",
   next: "sassy-calci",
   introPara:
@@ -199,6 +210,7 @@ const sassyCalciData: DetailedData = {
     "/assets/project-images/calculator/calci-2.png",
     "/assets/project-images/calculator/calci-3.png",
   ],
+  imageIds: ["calci-1", "calci-2", "calci-3", "calci-4"],
   prev: "quiz-app",
   next: null,
   introPara:
