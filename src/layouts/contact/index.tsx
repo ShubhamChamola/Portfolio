@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
           <a
             className="link-highlight"
             target="blank"
-            href="https://github.com/ShinOO7?tab=repositories"
+            href="https://github.com/ShubhamChamola?tab=repositories"
           >
             My Repositories
             <ArrowSVG />
